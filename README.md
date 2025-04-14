@@ -1,117 +1,94 @@
-Movie Recommender System
-A content-based movie recommendation system built using Python and Streamlit. This application suggests similar movies based on your selection by analyzing metadata such as genres, keywords, cast, and crew. It presents recommendations interactively with movie posters and titles.
+# 🎬 Movie Recommender System
 
-Features
-Select movies via a searchable dropdown menu
+A content-based movie recommendation system built with Streamlit and Python. This application recommends similar movies based on your selection, displaying movie posters and titles in an interactive interface.
 
-Displays posters and titles with a clean layout
+## 📋 Features
 
-Adjustable number of recommendations using a slider
+- Search or select movies from a dropdown menu
+- Adjust number of recommendations via slider control
+- View movie posters and titles with clean alignment
+- Fast content-based recommendations using similarity metrics
+- Error handling for API requests and data loading
 
-Fast recommendations powered by cosine similarity
+## 🛠 Technologies Used
 
-Robust error handling for API requests and data loading
+- *Python*: Core programming language
+- *Streamlit*: Web application framework
+- *Pandas*: Data manipulation and analysis
+- *Pickle*: Data serialization for storing pre-computed results
+- *TMDB API*: Movie data and poster images
 
-Technologies Used
-Python – Core programming language
+## 🚀 Installation
 
-Streamlit – Web application framework
+1. Clone the repository:
+   
+   git clone https://github.com/sriramp16/movie-recommender-system.git
+   cd movie-recommender-system
+   
 
-Pandas – Data manipulation and analysis
+2. Create a virtual environment:
+   
+   python -m venv venv
+   
 
-Pickle – Serialization for pre-computed similarity data
+3. Activate the virtual environment:
+   - Windows: venv\Scripts\activate
+   - macOS/Linux: source venv/bin/activate
 
-TMDB API – Movie metadata and poster retrieval
+4. Install required packages:
+   
+   pip install -r requirements.txt
+   
 
-Installation
-Clone the repository:
+5. Download the required pickle files (movies_dict.pkl and similarity.pkl) or generate them using the provided scripts.
 
-bash
-Copy
-Edit
-git clone https://github.com/sriramp16/movie-recommender-system.git
-cd movie-recommender-system
-Create a virtual environment:
+## 📊 Dataset
 
-bash
-Copy
-Edit
-python -m venv venv
-Activate the virtual environment:
+The system uses a dataset containing movie information including:
+- Movie titles
+- Movie IDs (TMDB)
+- Genres
+- Other metadata for computing similarities
 
-Windows:
+The similarity between movies is pre-computed and stored in the similarity.pkl file.
 
-bash
-Copy
-Edit
-venv\Scripts\activate
-macOS/Linux:
+## 🔧 Usage
 
-bash
-Copy
-Edit
-source venv/bin/activate
-Install required packages:
+1. Run the Streamlit application:
+   
+   streamlit run app.py
+   
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Ensure the following files are available:
+2. Open your browser and navigate to http://localhost:8501
 
-movies_dict.pkl
+3. Select a movie from the dropdown or type to search
 
-similarity.pkl
-(Download or generate them using the provided scripts.)
+4. Adjust the number of recommendations using the slider
 
-Dataset
-The dataset includes:
+5. Click "Show Recommendation" to get personalized movie suggestions
 
-Movie titles and TMDB IDs
+## 🔄 Working Process
 
-Genres and keywords
+1. User selects a movie from the dropdown menu
+2. System finds the selected movie's index in the dataset
+3. Pre-computed similarity scores are used to find similar movies
+4. TMDB API is queried to fetch movie posters
+5. Results are displayed in a responsive grid layout
 
-Metadata used for computing similarity
+## 🔮 Future Enhancements
 
-The similarity matrix is pre-computed and stored in similarity.pkl.
+- Genre filtering
+- User ratings and feedback
+- Multi-select movie comparison
+- Personalized recommendations based on user preferences
+- Support for regional cinema including Telugu movies
 
-Usage
-Run the application:
 
-bash
-Copy
-Edit
-streamlit run app.py
-Open your browser and go to http://localhost:8501
+## 👤 Author
 
-Search or select a movie, adjust the number of recommendations using the slider, and click "Show Recommendation"
-
-Working Process
-User selects a movie from the dropdown
-
-The system identifies the selected movie's index in the dataset
-
-Retrieves pre-computed similarity scores
-
-Fetches poster images via the TMDB API
-
-Displays results in a responsive layout
-
-Future Enhancements
-Genre-based filtering
-
-Integration of user ratings and feedback
-
-Support for multi-select movie comparison
-
-Personalized recommendations
-
-Regional cinema support (e.g., Telugu movies)
-
-Author
 Tejasri Mutyala
 
-Acknowledgements
-The Movie Database (TMDB) for the API
+## 🙏 Acknowledgements
 
-Streamlit for the application framework
+- The Movie Database (TMDB) for providing the API
+- Streamlit for the awesome framework**
