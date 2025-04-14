@@ -1,18 +1,18 @@
-🎬 Movie Recommender System
+Movie Recommender System
 A content-based movie recommendation system built using Python and Streamlit. This application suggests similar movies based on your selection by analyzing metadata such as genres, keywords, cast, and crew. It presents recommendations interactively with movie posters and titles.
 
-📋 Features
-🎯 Select movies via a searchable dropdown menu
+Features
+Select movies via a searchable dropdown menu
 
-🎞️ Displays posters and titles with clean layout
+Displays posters and titles with a clean layout
 
-🎛️ Adjustable number of recommendations using a slider
+Adjustable number of recommendations using a slider
 
-⚡ Fast recommendations powered by cosine similarity
+Fast recommendations powered by cosine similarity
 
-🔒 Robust error handling for API requests and data loading
+Robust error handling for API requests and data loading
 
-🛠 Technologies Used
+Technologies Used
 Python – Core programming language
 
 Streamlit – Web application framework
@@ -23,7 +23,7 @@ Pickle – Serialization for pre-computed similarity data
 
 TMDB API – Movie metadata and poster retrieval
 
-🚀 Installation
+Installation
 Clone the repository:
 
 bash
@@ -64,54 +64,54 @@ movies_dict.pkl
 similarity.pkl
 (Download or generate them using the provided scripts.)
 
-📊 Dataset
+Dataset
 The dataset includes:
 
-Movie titles and IDs (from TMDB)
+Movie titles and TMDB IDs
 
 Genres and keywords
 
-Metadata for computing similarities
+Metadata used for computing similarity
 
 The similarity matrix is pre-computed and stored in similarity.pkl.
 
-🔧 Usage
-Run the app:
+Usage
+Run the application:
 
 bash
 Copy
 Edit
 streamlit run app.py
-Open your browser at http://localhost:8501
+Open your browser and go to http://localhost:8501
 
-Search or select a movie, set the number of recommendations, and click "Show Recommendation"
+Search or select a movie, adjust the number of recommendations using the slider, and click "Show Recommendation"
 
-🔄 How It Works
-User selects a movie
+Working Process
+User selects a movie from the dropdown
 
-System finds the movie's index in the dataset
+The system identifies the selected movie's index in the dataset
 
 Retrieves pre-computed similarity scores
 
-Fetches poster images using TMDB API
+Fetches poster images via the TMDB API
 
 Displays results in a responsive layout
 
-🔮 Future Enhancements
+Future Enhancements
 Genre-based filtering
 
-Feedback-based personalization
+Integration of user ratings and feedback
 
-Multi-select comparison
+Support for multi-select movie comparison
 
-Integration of user ratings
+Personalized recommendations
 
-Support for regional content (e.g., Telugu movies)
+Regional cinema support (e.g., Telugu movies)
 
-👤 Author
+Author
 Tejasri Mutyala
 
-🙏 Acknowledgements
+Acknowledgements
 The Movie Database (TMDB) for the API
 
-Streamlit for the powerful and intuitive framework
+Streamlit for the application framework
